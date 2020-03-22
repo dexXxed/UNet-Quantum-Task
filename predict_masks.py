@@ -29,12 +29,21 @@ for i in range(len(preds_test)):
                                        (sizes_test[i][0], sizes_test[i][1]),
                                        mode='constant', preserve_range=True))
 
+# for i in range(10):
+#     # Выполните проверку работоспособности на некоторых случайных обучающих выборках
+#     ix = random.randint(0, len(preds_train_t))
+#     imshow(X_train[ix])
+#     plt.show()
+#     imshow(np.squeeze(Y_train[ix]))
+#     plt.show()
+#     imshow(np.squeeze(preds_train_t[ix]))
+#     plt.show()
+
+
 for i in range(10):
-    # Выполните проверку работоспособности на некоторых случайных обучающих выборках
-    ix = random.randint(0, len(preds_train_t))
-    imshow(X_train[ix])
+    # Выполним проверку работоспособности на некоторых случайных тестовых выборках
+    ix = random.randint(0, len(preds_test_t))
+    imshow(X_test[ix])
     plt.show()
-    imshow(np.squeeze(Y_train[ix]))
-    plt.show()
-    imshow(np.squeeze(preds_train_t[ix]))
+    imshow(np.squeeze(preds_test_t[ix]))
     plt.show()

@@ -41,7 +41,6 @@ def image_processing():
 
     # Получаем и изменяем размер изображений для тестирования
     X_test = np.zeros((len(test_ids), IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS), dtype=np.uint8)
-    sizes_test = []
     print('Получаем и изменяем размер изображений для тестирования')
     sys.stdout.flush()
     for n, id_ in tqdm(enumerate(test_ids), total=len(test_ids)):
