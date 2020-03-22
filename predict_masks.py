@@ -11,7 +11,7 @@ from utils import dice_coef, dice_coef_loss, image_processing
 
 X_train, Y_train, X_test = image_processing()
 
-# Предсказываем, основываясь на обучающей
+# Предсказываем, основываясь на тестовой выборке, так и на значениях масок и обучающей выборке
 model = load_model('model.h5', custom_objects={'dice_coef_loss': dice_coef_loss, 'dice_coef': dice_coef})
 preds_train = model.predict(X_train[:int(X_train.shape[0] * 0.9)], verbose=1)
 preds_val = model.predict(X_train[int(X_train.shape[0] * 0.9):], verbose=1)
@@ -42,8 +42,10 @@ for i in range(len(preds_test)):
 
 for i in range(10):
     # Выполним проверку работоспособности на некоторых случайных тестовых выборках
-    ix = random.randint(0, len(preds_test_t))
-    imshow(X_test[ix])
+    ix = random.randint(0, len(preds_val_t))
+    imshow(X_train[int(X_train.shape[0] * 0.9):][ix])
     plt.show()
-    imshow(np.squeeze(preds_test_t[ix]))
+    imshow(np.squeeze(Y_train[int(Y_train.shape[0] * 0.9):][ix]))
+    plt.show()
+    imshow(np.squeeze(preds_val_t[ix]))
     plt.show()
