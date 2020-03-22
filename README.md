@@ -81,4 +81,4 @@ python predict_masks.py
 
 Copyright (c) Denys Shcherbyna. All rights reserved.
 
-Licensed under the [MIT](LICENSE) License.
+Licensed under the [MIT](https://github.com/dexXxed/UNet-Quantum-Task/blob/master/LICENCE) License.
