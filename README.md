@@ -1,4 +1,6 @@
 # UNet-Quantum-Task
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
 Используемая архитектура нейронной сети - это так называемая U-Net, которая используется для сегментации изображений ([U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/pdf/1505.04597.pdf)).
 
 ![U-Net](https://github.com/dexXxed/UNet-Quantum-Task/blob/master/img/u-net-architecture.png?raw=true)
